@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deber semana 3</title>
+    <style>
+        /* Estilos para tablas con líneas visibles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 2px solid #333;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilos para video de tamaño normal */
+        video {
+            width: 480px;
+            height: 270px;
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Estilos para imagen con título */
+        .imagen-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .imagen-titulo {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        form {
+            max-width: 400px;
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deber semana 3</h1>
+        <h2>Bienvenidos</h2>
+        <p>Hola bienvenidos al curso de desarrollo de aplicaciones <strong>web</strong>.</p>
+        <p>Este es un párrafo de ejemplo para el deber de la semana 3.</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a> |
+            <a href="#acerca">Acerca de</a> |
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section>
+            <h2>Sección 1</h2>
+            <p>Contenido de la sección 1.</p>
+        </section>
+
+        <section>
+            <h2>Sección 2</h2>
+            <p>Contenido de la sección 2.</p>
+        </section>
+
+        <article id="acerca">
+            <h2>Artículo de ejemplo</h2>
+            <p>Este es un artículo que contiene información relevante sobre el tema tratado en esta página.</p>
+
+            <ul>
+                <li>Lista 1</li>
+                <li>Lista 2</li>
+                <li>Lista 3</li>
+            </ul>
+
+            <ol>
+                <li>Primer elemento ordenado</li>
+                <li>Segundo elemento ordenado</li>
+                <li>Tercer elemento ordenado</li>
+            </ol>
+
+            <!-- Título agregado sobre la imagen -->
+            <div class="imagen-container">
+                <div class="imagen-titulo">Fachada de la UEA</div>
+                <img src="Universidad_Estatal_Amazónica.jpg" alt="Fachada de la UEA">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                        <th>Encabezado 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                        <td>Dato 3</td>
+                    </tr>
+                    <tr>
+                        <td>Dato 4</td>
+                        <td>Dato 5</td>
+                        <td>Dato 6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Video de bienvenida</h3>
+            <video controls>
+                <source src="¡De regreso a clases, bienvenidos a la UEA!.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+        </article>
+
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" required>
+
+                <label for="correo">Correo:</label>
+                <input id="correo" name="correo" type="email" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Desarrollo de App Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
