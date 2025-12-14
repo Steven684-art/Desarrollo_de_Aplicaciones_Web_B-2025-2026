@@ -2,179 +2,84 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Deber semana 3</title>
-    <style>
-        /* Estilos para tablas con líneas visibles */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 2px solid #333;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        /* Estilos para video de tamaño normal */
-        video {
-            width: 480px;
-            height: 270px;
-            max-width: 100%;
-            display: block;
-            margin: 20px auto;
-        }
-
-        /* Estilos para imagen con título */
-        .imagen-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .imagen-titulo {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            color: #0066cc;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        form {
-            max-width: 400px;
-            margin: 20px 0;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deber semana 3 - Desarrollo Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Deber semana 3</h1>
-        <h2>Bienvenidos</h2>
-        <p>Hola bienvenidos al curso de desarrollo de aplicaciones <strong>web</strong>.</p>
-        <p>Este es un párrafo de ejemplo para el deber de la semana 3.</p>
+        <h2>Bienvenidos a Desarrollo Web</h2>
+        <p>Hola <strong>bienvenidos</strong> al curso de desarrollo de aplicaciones <em>web</em>.</p>
+        <p>Este es un párrafo de ejemplo para el <strong>deber de la semana 3</strong> con formato adicional.</p>
 
         <nav>
             <a href="#inicio">Inicio</a> |
             <a href="#acerca">Acerca de</a> |
+            <a href="https://github.com" target="_blank">GitHub</a> |
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <main id="inicio">
         <section>
-            <h2>Sección 1</h2>
-            <p>Contenido de la sección 1.</p>
+            <h2>Sección 1 - Introducción</h2>
+            <p>Contenido de la <strong>sección 1</strong> con información importante.</p>
         </section>
 
         <section>
-            <h2>Sección 2</h2>
-            <p>Contenido de la sección 2.</p>
+            <h2>Sección 2 - Contenido</h2>
+            <p>Contenido de la <em>sección 2</em> con más detalles del proyecto.</p>
         </section>
 
         <article id="acerca">
             <h2>Artículo de ejemplo</h2>
-            <p>Este es un artículo que contiene información relevante sobre el tema tratado en esta página.</p>
+            <h3>Elementos multimedia y listas</h3>
+            <p>Este artículo contiene <strong>información relevante</strong> sobre el tema con todos los elementos requeridos.</p>
 
+            <h4>Lista desordenada</h4>
             <ul>
-                <li>Lista 1</li>
-                <li>Lista 2</li>
-                <li>Lista 3</li>
+                <li>Elemento 1 - Desarrollo web</li>
+                <li>Elemento 2 - HTML5 semántico</li>
+                <li>Elemento 3 - CSS moderno</li>
             </ul>
 
+            <h4>Lista ordenada</h4>
             <ol>
-                <li>Primer elemento ordenado</li>
-                <li>Segundo elemento ordenado</li>
-                <li>Tercer elemento ordenado</li>
+                <li>Primer paso - Estructura HTML</li>
+                <li>Segundo paso - Estilos CSS</li>
+                <li>Tercer paso - Subir a GitHub</li>
             </ol>
 
-            <!-- Título agregado sobre la imagen -->
             <div class="imagen-container">
-                <div class="imagen-titulo">Fachada de la UEA</div>
-                <img src="Universidad_Estatal_Amazónica.jpg" alt="Fachada de la UEA">
+                <h4>Fachada de la UEA</h4>
+                <img src="Universidad_Estatal_Amazónica.jpg" alt="Fachada de la Universidad Estatal Amazónica">
             </div>
 
+            <h4>Tabla de datos</h4>
             <table>
                 <thead>
                     <tr>
-                        <th>Encabezado 1</th>
-                        <th>Encabezado 2</th>
-                        <th>Encabezado 3</th>
+                        <th>Materia</th>
+                        <th>Profesor</th>
+                        <th>Horas</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Dato 1</td>
-                        <td>Dato 2</td>
-                        <td>Dato 3</td>
+                        <td>HTML5</td>
+                        <td>Juan Pérez</td>
+                        <td>4</td>
                     </tr>
                     <tr>
-                        <td>Dato 4</td>
-                        <td>Dato 5</td>
-                        <td>Dato 6</td>
+                        <td>CSS3</td>
+                        <td>María Gómez</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Carlos López</td>
+                        <td>4</td>
                     </tr>
                 </tbody>
             </table>
@@ -195,13 +100,13 @@
                 <label for="correo">Correo:</label>
                 <input id="correo" name="correo" type="email" required>
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Enviar mensaje</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Desarrollo de App Web. Todos los derechos reservados.</p>
+        <p>© 2025 Desarrollo Web - Universidad Estatal Amazónica. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
