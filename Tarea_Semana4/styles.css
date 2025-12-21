@@ -1,0 +1,53 @@
+
+/* Titulo principal de la página */
+h1 {
+    font-weight: bold;
+    color: lch(2.19% 0 296.81);
+    background-color: rgb(136, 253, 107);
+    h2 {
+        font-weight: bold;
+        color: lch(52.06% 85.16 27.13);
+    }
+}
+/* Estilo del header con borde azul */
+.navbar {
+  background-color: #222;
+  border-top: 5px solid rgb(222, 245, 93);
+}
+
+h2 {
+    font-weight: 700;
+    color: #eb1111;          /* gris oscuro */
+}
+
+/* Títulos principales de los cajones */
+.titulo-card {
+    font-weight: 700;
+    color: #f54d27;          /* naranja fuerte */
+}
+
+/* Fondos diferentes para cada card */
+.card-color-1 {
+    background-color: #70f54f;   /* fondo suave naranja */
+}
+
+.card-color-2 {
+    background-color: lch(78.03% 37.99 196.76);   /* fondo suave celeste */
+}
+
+.card-color-3 {
+    background-color: #e8ffe6;   /* fondo suave verde */
+}
+
+/* Efectos hover para las cards */
+.card {
+    box-shadow: 0 4px 8px rgba(221, 184, 184, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(190, 144, 144, 0.2);
+}
