@@ -1,0 +1,28 @@
+   <!--Tarea: Semana 05: Fundamentos de JavaScript: manipulación del DOM y eventos.-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><strong>GALERÍA DE IMÁGENES INTERACTIVAS</strong></h1>
+    </header>
+    <main>
+        <div class="controls">
+            <input type="url" id="imageUrl" placeholder="Ingresa URL de imagen (ej: https://picsum.photos/300)">
+            <button id="addBtn">Agregar Imagen</button>
+            <button id="deleteBtn" disabled>Eliminar Seleccionada</button>
+        </div>
+        <div id="gallery" class="gallery"></div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Elaborado por Steven Shiguango. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
