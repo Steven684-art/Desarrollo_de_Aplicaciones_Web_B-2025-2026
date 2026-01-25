@@ -1,57 +1,61 @@
-// Arreglo inicial de productos
-const productosIniciales = [
-    { nombre: 'Laptop Gamer', precio: '$1200', descripcion: 'Potente para juegos y edición.' },
-    { nombre: 'Smartphone', precio: '$800', descripcion: 'Cámara 108MP y batería larga.' },
-    { nombre: 'Auriculares', precio: '$150', descripcion: 'Cancelación de ruido activa.' },
-];
+let productos = []; // Lista vacía al inicio
 
-// Función para renderizar lista
-function renderizarLista(productos) {
+function renderizarProductos() {
     const lista = document.getElementById('lista-productos');
-    lista.innerHTML = '';  // Limpiar lista
-
-    productos.forEach((producto, index) => {
-        // Plantilla dinámica con colores alternos via CSS nth-child
+    if (productos.length === 0) {
+        lista.innerHTML = '<li class="empty-list">Agrega tu primer producto...</li>';
+        return;
+    }
+    
+    lista.innerHTML = '';
+    productos.forEach(producto => {
         const li = document.createElement('li');
-        li.innerHTML = `
+        
+        // Info del producto siempre a la izquierda
+        const info = document.createElement('div');
+        info.className = 'producto-info';
+        info.innerHTML = `
             <h3>${producto.nombre}</h3>
             <p class="precio">${producto.precio}</p>
-            <p>${producto.descripcion}</p>
+            <p>${producto.desc}</p>
         `;
+        li.appendChild(info);
+        
+        // Imagen solo si hay URL, a la derecha
+        if (producto.imagen) {
+            const img = document.createElement('img');
+            img.src = producto.imagen;
+            img.alt = producto.nombre;
+            img.className = 'producto-img';
+            img.onerror = function() {
+                this.src = 'https://picsum.photos/300?random=99'; // Fallback
+            };
+            li.appendChild(img);
+        }
+        
         lista.appendChild(li);
     });
 }
 
-// Cargar productos al inicio
-document.addEventListener('DOMContentLoaded', () => {
-    renderizarLista(productosIniciales);
-});
-
-// Función agregar producto (mejorada)
 function agregarProducto() {
-    const nombreInput = document.getElementById('nombre');
-    const precioInput = document.getElementById('precio');
-    const descInput = document.getElementById('desc');
+    const nombre = document.getElementById('nombre').value.trim();
+    const precio = document.getElementById('precio').value.trim();
+    const desc = document.getElementById('desc').value.trim();
+    const imagen = document.getElementById('imagen').value.trim();
 
-    const nombre = nombreInput.value.trim();
-    const precio = precioInput.value.trim();
-    const desc = descInput.value.trim();
-
-    if (nombre && precio && desc) {
-        const nuevoProducto = { 
-            nombre: nombre.charAt(0).toUpperCase() + nombre.slice(1),  // Capitalizar
-            precio, 
-            descripcion: desc 
-        };
-        productosIniciales.push(nuevoProducto);
-        renderizarLista(productosIniciales);  // Re-renderiza con colores alternos
-
+    if (nombre && precio) {
+        productos.push({ nombre, precio, desc, imagen });
+        renderizarProductos();
         // Limpiar inputs
-        nombreInput.value = '';
-        precioInput.value = '';
-        descInput.value = '';
-        nombreInput.focus();  // Foco en primer input
+        document.getElementById('nombre').value = '';
+        document.getElementById('precio').value = '';
+        document.getElementById('desc').value = '';
+        document.getElementById('imagen').value = '';
+        document.getElementById('nombre').focus();
     } else {
-        alert('Por favor, completa todos los campos.');
+        alert('Por favor, ingresa al menos nombre y precio.');
     }
 }
+
+// Render inicial (vacío)
+document.addEventListener('DOMContentLoaded', renderizarProductos);
