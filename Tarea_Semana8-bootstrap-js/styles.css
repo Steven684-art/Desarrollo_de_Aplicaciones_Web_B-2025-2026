@@ -1,0 +1,89 @@
+/* Fondo verde suave para toda la página */
+body {
+    background-color: #e8f5e8; /* Verde menta muy suave */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo celeste suave para el contenedor del carrusel */
+#carouselEjemplo {
+    background-color: #e3f2fd; /* Celeste claro suave */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-item img {
+    width: 400px !important;     /* Ancho pequeño fijo */
+    height: 300px !important;    /* Alto pequeño fijo */
+    max-width: 90%;             /* No se sale del contenedor */
+    object-fit: cover;           /* Mantiene proporción */
+    margin: 0 auto;              /* Centrada horizontal */
+    display: block;              /* Centrada perfecta */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Centrar el título del carrusel */
+.carousel-caption h5 {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+}
+
+/* Flechas del carrusel de color negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); /* Flecha blanca sobre negro */
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); /* Flecha blanca sobre negro */
+}
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+/* Colores suaves en tabla hover */
+.table-hover tbody tr:hover {
+    background-color: #f0f8ff; /* Azul pálido suave */
+}
+
+/* Botón success verde suave personalizado */
+.btn-success {
+    background-color: #7cec5a;
+    border-color: #7cec5a;
+}
+
+.btn-success:hover {
+    background-color: #5bc43a;
+    border-color: #5bc43a;
+}
+
+/* Footer links */
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mejora responsividad en móviles */
+@media (max-width: 650px) {
+    .carousel-item img {
+        height: 225px;
+    }
+}
+
