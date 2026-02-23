@@ -1,0 +1,139 @@
+
+/* RESET: Elimina márgenes y paddings por defecto de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL BODY: Define la fuente y espaciado base */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER PRINCIPAL: Fondo blanco y padding general */
+.header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+}
+
+/* CONTENEDOR PRINCIPAL DEL HEADER: Alinea logos y título */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.header-content .titulo {
+    flex: 1;
+    text-align: left;
+}
+
+.titulo {
+    font-size: 2.6em;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+.logo, .logo1 {
+    height: 130px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* MENÚ DE NAVEGACIÓN: Fondo azul claro, centrado */
+nav {
+    background-color: #8bd2f3;
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;  /* Alineación a la izquierda */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 20px;
+}
+
+/* NUEVA SECCIÓN BIENVENIDA: Alineada a la izquierda, fondo sutil */
+.welcome-section {
+    background-color: #f8f9fa;  /* Fondo claro */
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;  /* Alineación izquierda principal */
+}
+
+.welcome-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.welcome-section ul {
+    list-style-type: disc;  /* Bullets visibles */
+    padding-left: 20px;     /* Indentación izquierda */
+    text-align: left;
+}
+
+.welcome-section li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* CONTENIDO PRINCIPAL: Ahora después de bienvenida */
+main {
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1073a4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 150px;  /* Reducido para flujo */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .titulo {
+        order: -1;
+    }
+    
+    .logo, .logo1 {
+        order: 1;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .welcome-section {
+        padding: 20px 10px;
+        text-align: center;  /* En móvil, centra para mejor legibilidad */
+    }
+}

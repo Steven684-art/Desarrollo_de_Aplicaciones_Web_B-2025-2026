@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Reserva de Mesas{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+   <header class="header">
+    <div class="header-content">
+        <h1 class="titulo">Restaurante Rincón Costeño</h1>
+        <h3 class="subtitulo">"Sabor del mar en tu mesa"</h3>  
+     
+        <img src="{{ url_for('static', filename='img/logo.png') }}"
+             alt="Logo Sazón Costeño" class="logo">
+    </div>
+
+</header>
+
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('about') }}">Acerca de</a></li>
+            <li><a href="{{ url_for('productos') }}">Productos</a></li>
+            <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+            <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sazón Costeño - Proyecto Reserva de Mesas</p>
+    </footer>
+</body>
+</html>
